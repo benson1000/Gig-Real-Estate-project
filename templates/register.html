@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% from "formhelpers.html" import render_field %}
+
+<div class="d-flex justify-content-around">
+    <form method="POST" class="col-4 p-4 bg-dark text-light">
+        <h2 class="text-primary">Register</h2>
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+
+            <div class="form-group">
+                {{render_field(form.username, class_="form-control")}}
+            </div>
+
+            <div class="form-group">
+                {{render_field(form.email, class_="form-control")}}
+            </div>
+
+            <div class="form-group">
+                {{render_field(form.password, class_="form-control")}}
+            </div>
+
+            <div class="form-group">
+                {{render_field(form.confirm_password, class_="form-control")}}
+            </div>
+
+        </fieldset>
+
+    </form>
+
+
+</div>
+{% endblock content%}

@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/header.css')}}">
+</head>
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class ="header" id="header">
+    <div class ="logo" id = 'logo' title="GIG REAL ESTATE">
+        <h3>Gig Real Estate</h3>
+    </div>
+
+    <div class="nav-bars">
+        {% if is_authenticated %}
+        <a href='/logout'>Logout</a>
+        <a href="{{url_for('appointments')}}">Book your Appointment</a>
+        <a href="{{url_for('predict')}}">Prediction</a>
+
+        {% else %}
+        <div class="navigation">
+            <a href="{{url_for('home')}}"><span>Home</span></a>
+            <a href="{{url_for('services')}}">Services</a>
+            <a href="{{url_for('contact')}}">Contact</a>
+        </div>
+
+        {% endif %}
+    </div>
+</section>
+
+{% endblock content %}
