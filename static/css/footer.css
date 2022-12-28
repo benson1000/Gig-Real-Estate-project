@@ -1,0 +1,100 @@
+.footer {
+    background-color: #777;
+    display: block;
+    
+}
+
+.main {
+    margin-left: 60px;
+    width: 90%;
+    height: 38%;
+
+}
+.main>.box-footer{
+    justify-content: center;
+    display: block;
+    width: 300px;
+    text-align: center;
+
+}
+
+.main>.box-footer h3{
+    color: #0000ff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    padding-top: 29px;
+    
+
+}
+.main>.box-footer p{
+    color: beige;
+    font-size: 1.1rem;
+    line-height: 170%;
+    justify-content: center;  
+}
+
+
+.main>.footer-box{
+    margin-left: 360px;
+    width: 460px;
+    text-align: center;
+    margin-top: -171px;
+  
+}
+
+.main>.footer-box h3{
+    color: #0000ff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 10px 0px;
+    margin-top: 0px;
+
+
+}
+
+.main>.footer-box ul li {
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 0px;
+    transition: ease 0.4s;
+}
+.main>.footer-box ul li a {
+    
+    color: purple;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+.main>.footer-box ul li a:hover{
+    color: #008000;
+    
+}
+.main>.copyright-box {
+    justify-content: center;
+    text-align: center;
+    margin-left: 820px;
+    margin-right: 70px;
+    width: 380px;
+    display: block;
+    margin-top: -198px;
+
+}
+
+.main>.copyright-box h3{
+    color: #0000ff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 10px 0px;
+}
+.main>.copyright-box p{
+    color: beige;
+    font-size: 1.1rem;
+    line-height: 180%;
+    justify-content: space-evenly;  
+
+}
+
+
