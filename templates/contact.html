@@ -1,9 +1,67 @@
+<head>
+    <style>
+        .contact-form{
+            margin: 0% 5%;
+            width: 35%;
+            margin-top: 20px;
+        }
+        .contact-form h2{
+            color: blue;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            
+        }
+        
+        
+        .contact-form>.form{
+            display: flex;
+            flex-direction: column;
+        }
+        .suggestion-form{
+            color: black;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .suggestion{
+            width: inherit;
+            font-size: 20px;
+            border: none;
+            background-color: #eee;
+            margin-bottom: -20px;
+        
+        }
+    </style>
+</head>
 {% extends 'base.html' %}
 {% include 'header.html' %}
 
 {% block content %}
-<div class = "contact-container">
-    <h2>Welcome to the Contact Page</h2>
+<div class="contact-form">
+    <form class="form" method="POST">
+        <h2>Contact us</h2>
+        <div class="form-group">
+            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control is-valid" id="validationServerEmail" aria-describedby="inputGroupPrepend3 validationServerEmailFeedback" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="number" class="form-control is-valid" id="validationServerEmail" aria-describedby="inputGroupPrepend3 validationServerEmailFeedback" placeholder="Phone number" required>
+        </div>
+
+        <label class="suggestion-form">Make your suggestion:</label>
+        <br>
+        <textarea class="suggestion" name="suggestion-form" rows="7" cols="30">
+        </textarea><br><br>
+
+        <div class="submit-btn">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+    
 </div>
 {% include 'footer.html' %}
 

@@ -1,10 +1,40 @@
+<head>
+    <style>
+        form{
+            margin-top: 80px;
+            
+        }
+        form h2{
+            text-align: center;
+            align-items: center;
+        }
+        .registered {
+            margin-top: 35px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .registered a{
+            color: violet;
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .registered a:hover{
+            color: purple;
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
 {% extends "base.html" %}
 
 {% block content %}
 {% from "formhelpers.html" import render_field %}
 <div class="d-flex justify-content-around">
     <form method="POST" class="col-4 p-4 bg-dark text-light">
-        <h2 class="text-primary">Register</h2>
+        <h2 class="text-primary">Login</h2>
         
         {{ form.hidden_tag() }}
 
@@ -18,6 +48,8 @@
                 {{render_field(form.password, class_="form-control")}}
             </div>
         </fieldset>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class="registered">Not yet Registered?<a href="{{url_for('register')}}"> Register here!</a></p>
     </form>
 </div>
 {% endblock content %}

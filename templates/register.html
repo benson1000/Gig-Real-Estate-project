@@ -1,3 +1,32 @@
+<head>
+    <style>
+        form{
+            margin-top: 30px;
+        }
+        form h2{
+            text-align: center;
+            align-items: center;
+        }
+        .registered {
+            margin-top: 35px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .registered a{
+            color: violet;
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .registered a:hover{
+            color: purple;
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
 {% extends "base.html" %}
 
 {% block content %}
@@ -26,9 +55,10 @@
             </div>
 
         </fieldset>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="registered">Already registered? <a href="{{url_for('login')}}"> Login here!</a></p>
 
     </form>
-
-
+    
 </div>
 {% endblock content%}

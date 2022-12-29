@@ -1,6 +1,7 @@
 .footer {
     background-color: #777;
     display: block;
+    /*margin-top: -40px;*/
     
 }
 
@@ -44,7 +45,7 @@
 }
 
 .main>.footer-box h3{
-    color: #0000ff;
+    color: green;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 7px 0px;
@@ -61,15 +62,17 @@
     transition: ease 0.4s;
 }
 .main>.footer-box ul li a {
-    
-    color: purple;
     font-size: 20px;
-    font-weight: bolder;
     cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    transition: 0.4s ease;
     
 }
 .main>.footer-box ul li a:hover{
-    color: #008000;
+    color: yellow;
     
 }
 .main>.copyright-box {
@@ -84,7 +87,7 @@
 }
 
 .main>.copyright-box h3{
-    color: #0000ff;
+    color: red;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 7px 0px;

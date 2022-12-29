@@ -1,0 +1,10 @@
+.word-box{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -38px;
+}
+.word-box>.image{
+    width: 1220px;
+    height: 500px;
+}
