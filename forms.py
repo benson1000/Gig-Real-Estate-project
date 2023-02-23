@@ -7,8 +7,8 @@ from flask_wtf import FlaskForm
 class RegistrationForm(FlaskForm):
     username = StringField('username',validators=[DataRequired(),Length(min=4, max=15)])
     email = EmailField('email',validators=[DataRequired(),Email(message='Please enter your email')])
-    password = PasswordField('Password',validators=[InputRequired(), Length(min=8, max=20)])
-    confirm_password = PasswordField('Confirm Password',validators=[DataRequired(), EqualTo(password)])
+    password = PasswordField('password',validators=[InputRequired(), Length(min=8, max=20)])
+    confirm_password = PasswordField('Confirm Password',validators=[InputRequired(), EqualTo(password)])
     Register = SubmitField('Register')
     
     

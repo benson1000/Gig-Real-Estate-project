@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+    box-sizing: border-box;
+}
+
+.services-container {
+    font-family: Verdana, sans-serif;
+
+}
+.first-container{
+    background-color: blue;
+    width: auto;
+}
+.list-box{
+    width: 600px;
+    background-color: brown;
+}
+.list-box p{
+    font-size: 20px;
+    padding: 32px;
+    text-transform: initial;
+    word-spacing: 3px;
+    line-height: 150%;
+}
+
+.list-box p span{
+    color: blue;
+    font-weight: bold;
+    text-shadow: 10px;
+}
+.list-box ul li{
+    padding-left: 40px;
+    list-style: none;
+    line-height: 120%;
+    text-align: justify;
+    text-decoration: none;
+    justify-content: space-between;
+    text-transform: initial;
+    list-style: outside none;
+    list-style-type: "✔";
+}
+.list-box ul li::marker {
+    color: green;
+    font-size: 1.5rem;
+    padding: 10px;
+}

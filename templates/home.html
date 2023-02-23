@@ -1,27 +1,96 @@
 <head>
     <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    
 </head>
 {% extends 'base.html' %}
 {% include 'header.html' %}
 
 {% block content %}
 <section class="home">
-    <div class="home-container">
-        <div class="word-box">
-            <img class="image" src="static\images\apartments.jpg">
-            <!--<img class="image" src="static\images\house.jpg">
-            <img class="image" src="static\images\house-1.jpg">
-            <h1>WELCOME TO GIG REAL ESTATE</h1>
-            <p>Gig is a kenyan real estate company that focuses on buying and selling of prime plots, building houses,<br>
-            renting and selling houses. The company is based in Nairobi. The company was established on 23<sup>rd</sup> November 2020.<br>
-            
-          </p>-->
-        </div>
+  <div class="slideshow-container">
 
+    <div class="word-box">
+      <img class="image" src="static\images\apartments.jpg" alt="">
+      <div class="text">Our Apartments in Kileleshwa</div>
     </div>
 
-</section>
+    <div class="word-box">
+      <img class="image" src="static\images\part2.jpg" alt="">
+      <div class="text">We also have powerful design for you</div>
+    </div>
 
+    <div class="word-box">
+      <img class="image" src="static\images\westlands.jpg" alt="">
+      <div class="text">Our New Apartments in westlands</div>
+    </div>
+
+    <div class="word-box">
+      <img class="image" src="static\images\table-room.jpg" alt="">
+      <div class="text">We design to satisfy your needs</div>
+    </div>
+
+    <div class="word-box">
+      <img class="image" src="static\images\house.jpg" alt="">
+      <div class="text">We also build houses according to your taste</div>
+    </div>
+
+    <div class="word-box">
+      <img class="image" src="static\images\project.jpg" alt="">
+      <div class="text">Our new and ongoing project in kikuyu, kiambu</div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> 
+    </div>
+
+  </div>
+  <br><br><br>
+  <div class="home-container">
+    <div class="first-box">
+      <p>Gig Real estate company was created in conjuction with the government plan to create affordable housing for all its citizens.
+        The idea was to support government plan that aims to develop houses that can be affordable to all, that is the low-income, middle-class and 
+        high-income earners. This aims to create good and presentable houses. At Gig Real Estate we offer all services to our customers, which includes; </p>
+        <ul>
+         <li>Buying and selling of prime plots.</li>
+         <li>Design houses for all customers.</li>
+         <li>We build houses according to the customers specification at an affording rate.</li>
+         <li>We rent apartments through gig agents.</li>
+         <li>We build apartments and sell them to the customers.</li>
+        </ul>
+    </div>
+
+    <div class="image-box">
+      <img class="image" src="static\images\office.jpg" alt="">
+    </div>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("word-box");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    </script>
+
+</section>
 {% include 'footer.html' %}
 
 {% endblock content %}

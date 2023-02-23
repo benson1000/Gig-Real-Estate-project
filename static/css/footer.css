@@ -1,102 +1,102 @@
 .footer {
     background-color: #777;
     display: block;
-    /*margin-top: -40px;*/
+    height: 250px;
+    margin-top: 0px;
     
 }
 
-.main {
-    margin-left: 60px;
-    width: 90%;
-    height: 38%;
-
+.footer-container {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+    margin-left: 30px;
+    text-align: center;
+    
 }
-.main>.box-footer{
+
+.footer-box {
+    color: blanchedalmond;
+    display: inline;
+    margin-top: 10px;
+}
+
+/*.main>.box-footer{
     justify-content: center;
     display: block;
     width: 300px;
     text-align: center;
+    background-color: black;
 
 }
+*/
 
-.main>.box-footer h3{
+.footer-box h3{
     color: #0000ff;
     font-weight: 600;
     font-size: 1.3rem;
-    padding-bottom: 10px;
-    padding-top: 29px;
-    
+    margin-top: 10px;
 
 }
-.main>.box-footer p{
+.footer-box p{
     color: beige;
     font-size: 1.1rem;
     line-height: 170%;
-    justify-content: center;  
+    justify-content: center;
+    margin-top: 10px;
 }
 
-
-.main>.footer-box{
-    margin-left: 360px;
-    width: 460px;
-    text-align: center;
-    margin-top: -204px;
-  
+.footer-bottom{
+    margin-left: 200px;
+}
+.footer-bottom h3{
+    color: #0000ff;
+    margin-top: 10px;
 }
 
-.main>.footer-box h3{
-    color: green;
-    font-weight: 700;
-    font-size: 1.3rem;
-    padding: 7px 0px;
-    margin-top: 0px;
-
-
-}
-
-.main>.footer-box ul li {
+.footer-bottom ul li {
     color: #ffffff;
     text-decoration: none;
     list-style: none;
-    padding: 5px 0px;
-    transition: ease 0.4s;
+    /*padding: 5px 0px;*/
+    transition: 0.4s ease;
+    padding-top: 15px;
 }
-.main>.footer-box ul li a {
+.footer-bottom ul li a {
     font-size: 20px;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
-    color: blue;
+    color: green;
     font-weight: bold;
     transition: 0.4s ease;
     
 }
-.main>.footer-box ul li a:hover{
+.footer-bottom ul li a:hover{
     color: yellow;
+    font-size: 1.5rem;
     
 }
-.main>.copyright-box {
+
+.copyright {
+    color: #fff;
+    margin-left: 200px;
     justify-content: center;
     text-align: center;
-    margin-left: 820px;
-    margin-right: 70px;
-    width: 380px;
-    display: block;
-    margin-top: -230px;
+    margin-top: -70px;
 
 }
-
-.main>.copyright-box h3{
-    color: red;
+.copyright h3{
+    color: blue;
     font-weight: 700;
     font-size: 1.3rem;
-    padding: 7px 0px;
 }
-.main>.copyright-box p{
+.copyright p{
     color: beige;
     font-size: 1.1rem;
     line-height: 180%;
-    justify-content: space-evenly;  
+    justify-content: space-evenly; 
+    margin-top: 10px; 
 
 }
 

@@ -45,7 +45,7 @@ def register():
         password = form.password.data
         
         #searching the user by email
-        conn = psycopg2.connect(host="localhost", database="users",user="#",password="#")
+        conn = psycopg2.connect(host="localhost", database="users",user="postgres",password="@benso7130")
         cursor = conn.cursor()
         
         conn.execute("SELECT * FROM users WHERE email=%s", (email,))
