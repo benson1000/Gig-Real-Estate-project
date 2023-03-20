@@ -5,14 +5,14 @@ from flask_wtf import FlaskForm
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField('username',validators=[DataRequired(),Length(min=4, max=15)])
-    email = EmailField('email',validators=[DataRequired(),Email(message='Please enter your email')])
-    password = PasswordField('password',validators=[InputRequired(), Length(min=8, max=20)])
-    confirm_password = PasswordField('Confirm Password',validators=[InputRequired(), EqualTo(password)])
-    Register = SubmitField('Register')
+    fullname = StringField("Name", validators=[DataRequired(), Length(min=10, max=70,message="Name should have atleast 10 characters")])
+    Email = EmailField('Email',validators=[DataRequired(),Email(message='Please enter your email')])
+    password = PasswordField('Password', validators=[DataRequired(),Length(min=8, max=12)])
+    confirm_password = PasswordField('Confirm Password',validators=[DataRequired(), EqualTo('password',"password MUST match")])
+    submit = SubmitField('Register')
     
     
 class LoginForm(FlaskForm):
-    email = EmailField('Email',validators=[InputRequired(),Email('Enter the correct email')])
-    password = PasswordField('Password',validators=[InputRequired(),Length(min=4, max=20)])
+    Email = EmailField('Email',validators=[InputRequired(),Email('Enter the correct email')])
+    password = PasswordField('Password',validators=[InputRequired(),Length(min=8, max=20)])
     remember = BooleanField('Remember me')
