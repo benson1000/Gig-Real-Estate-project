@@ -119,14 +119,14 @@ def login():
                     cursor.close()
                     return(url_for('recommendation'))
                 else:
-                    flash("Login failed, INCORRECT password","danger")
                     cursor.close()
+                    flash("Login failed, INCORRECT password","danger")
                     return render_template('login.html', form=form, title = 'login')     
             else:
                 # User email doesn't exist
                 cursor.close()
                 flash('EMAIL not Found, Please Register', 'danger')
-                return render_template('register.html', form=form, title='Register')
+            return render_template('register.html', form=RegistrationForm(request.form), title='Register')
     return render_template('login.html', form=form, title='login')
 
 
