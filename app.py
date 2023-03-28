@@ -127,6 +127,7 @@ def login():
                 cursor.close()
                 flash('EMAIL not Found, Please Register', 'danger')
             return render_template('register.html', form=RegistrationForm(request.form), title='Register')
+        ## this part is for any Login
     return render_template('login.html', form=form, title='login')
 
 
